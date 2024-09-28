@@ -1,0 +1,43 @@
+# Projeto de Gerenciamento de Registros
+
+Este projeto é um serviço de gerenciamento de registros utilizando o Firebase Firestore.
+Ele permite a criação, leitura, atualização e exclusão de registros.
+
+## Funcionalidades
+
+- Criar um novo registro
+- Obter um registro existente
+- Atualizar um registro existente
+- Excluir um registro
+
+## Tecnologias Utilizadas
+
+- Node.js
+- Firebase Firestore
+- Jest (para testes)
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter o seguinte instalado:
+
+- Node.js
+- npm
+- Firebase CLI
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone git@github.com:sousaprogramador/super-frete.git
+   ```
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd super-frete
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
