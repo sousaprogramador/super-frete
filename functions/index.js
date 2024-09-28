@@ -1,9 +1,18 @@
 const { initializeApp } = require('firebase-admin/app');
-const { onRequest } = require('firebase-functions/v2/https');
-const { createRecord } = require('./controllers/recordController');
-const { onNewRecordCreated } = require('./triggers/recordTrigger');
+const functions = require('firebase-functions/v2/https');
 
 initializeApp();
 
-exports.createRecord = onRequest(createRecord);
-exports.onNewRecordCreated = onNewRecordCreated;
+const recordController = require('./controllers/recordController');
+const { onDocumentCreated } = require('firebase-functions/v2/firestore');
+const recordTrigger = require('./triggers/recordTrigger');
+
+exports.createRecord = functions.onRequest(recordController.createRecord);
+exports.getRecord = functions.onRequest(recordController.getRecord);
+exports.updateRecord = functions.onRequest(recordController.updateRecord);
+exports.deleteRecord = functions.onRequest(recordController.deleteRecord);
+
+exports.onNewRecordCreated = onDocumentCreated(
+  'test_collection/{docId}',
+  recordTrigger.onNewRecordCreated
+);

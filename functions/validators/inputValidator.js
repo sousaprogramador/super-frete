@@ -1,10 +1,7 @@
-function validateInput(name) {
-  if (!name) {
-    throw new Error(
-      'Invalid input: name is required and must be a non-empty string.'
-    );
+class InputValidator {
+  validate(name) {
+    return name && typeof name === 'string' && name.trim() !== '';
   }
-  return true;
 }
 
-module.exports = { validateInput };
+module.exports = new InputValidator();
