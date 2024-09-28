@@ -1,6 +1,6 @@
 class InputValidator {
   validate(name) {
-    return name && typeof name === 'string' && name.trim() !== '';
+    return typeof name === 'string' && name.trim() !== '';
   }
 }
 
