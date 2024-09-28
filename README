@@ -30,6 +30,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
    ```bash
    git clone git@github.com:sousaprogramador/super-frete.git
    ```
+
 2. Navegue até o diretório do projeto:
 
    ```bash
@@ -40,4 +41,16 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 
    ```bash
    npm install
+   ```
+
+4. Configure o Firebase:
+
+   ```bash
+   firebase init
+   ```
+
+3. Inicie o emulador do Firebase:
+
+   ```bash
+   firebase emulators:start
    ```
