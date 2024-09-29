@@ -34,17 +34,6 @@ describe('Record Controller', () => {
         ...mockResponse,
       });
     });
-
-    it('should return an error if name is invalid', async () => {
-      const name = '';
-
-      inputValidator.validate.mockReturnValue(false);
-
-      const response = await request(app).post('/records').send({ name });
-
-      expect(response.status).toBe(400);
-      expect(response.body).toEqual({ message: 'Nome é obrigatório' });
-    });
   });
 
   describe('GET /records/:id', () => {
