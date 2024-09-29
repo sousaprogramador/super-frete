@@ -4,6 +4,35 @@ const RecordService = require('../services/recordService');
 
 jest.mock('../models/recordModel');
 jest.mock('../validators/inputValidator');
+jest.mock('firebase-admin/firestore', () => {
+  return {
+    getFirestore: jest.fn(() => ({
+      collection: jest.fn(() => ({
+        add: jest.fn().mockResolvedValue({ id: '12345' }),
+        doc: jest.fn(() => ({
+          get: jest
+            .fn()
+            .mockResolvedValue({
+              exists: true,
+              data: () => ({ name: 'Test Record', increment_id: 1 }),
+            }),
+          update: jest.fn().mockResolvedValue(),
+          delete: jest.fn().mockResolvedValue(),
+        })),
+        orderBy: jest.fn(() => ({
+          limit: jest.fn(() => ({
+            get: jest
+              .fn()
+              .mockResolvedValue({
+                empty: false,
+                docs: [{ data: () => ({ increment_id: 1 }) }],
+              }),
+          })),
+        })),
+      })),
+    })),
+  };
+});
 
 describe('RecordService', () => {
   describe('createRecord', () => {
