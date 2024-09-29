@@ -2,8 +2,11 @@ const { getFirestore } = require('firebase-admin/firestore');
 
 class RecordModel {
   constructor() {
-    this.db = getFirestore();
     this.collection = 'test_collection';
+  }
+
+  initialize() {
+    this.db = getFirestore();
   }
 
   async addRecord(data) {
