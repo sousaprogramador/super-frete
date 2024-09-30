@@ -17,7 +17,7 @@ exports.onNewRecordCreated = onDocumentCreated(
       .get();
     let currentId = 1;
     if (!currentIdSnapshot.empty) {
-      currentId = currentIdSnapshot.docs[0].data().increment_id + 1;
+      currentId = currentIdSnapshot.docs[0].data().increment_id++;
     }
     return newDocRef.update({ increment_id: currentId });
   }
