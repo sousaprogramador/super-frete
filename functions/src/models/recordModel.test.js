@@ -1,6 +1,6 @@
 const admin = require('firebase-admin');
 const { getFirestore } = require('firebase-admin/firestore');
-const RecordModel = require('../models/recordModel'); // Ajuste o caminho conforme necessário
+const RecordModel = require('../models/recordModel');
 
 jest.mock('firebase-admin/firestore', () => {
   const mockCollection = jest.fn();

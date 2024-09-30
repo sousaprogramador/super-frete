@@ -3,6 +3,9 @@
 Este projeto é um serviço de gerenciamento de registros utilizando o Firebase Firestore.
 Ele permite a criação, leitura, atualização e exclusão de registros.
 
+- Esta arquitetura permite escalar facilmente o projeto, com a adição de novas funcionalidades e endpoints.
+- Os testes automatizados garantem a qualidade do código e ajudam a evitar regressões.
+
 ## Funcionalidades
 
 - Criar um novo registro
@@ -27,6 +30,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 ## Instalação
 
 1. Clone o repositório:
+
    ```bash
    git clone git@github.com:sousaprogramador/super-frete.git
    ```
@@ -49,7 +53,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
    firebase init
    ```
 
-3. Inicie o emulador do Firebase:
+5. Inicie o emulador do Firebase:
 
    ```bash
    firebase emulators:start

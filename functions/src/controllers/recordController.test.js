@@ -4,7 +4,6 @@ const recordController = require('../controllers/recordController');
 const recordService = require('../services/recordService');
 const inputValidator = require('../validators/inputValidator');
 
-// Mock das dependências
 jest.mock('../services/recordService');
 jest.mock('../validators/inputValidator');
 jest.mock('../models/recordModel');
