@@ -4,7 +4,6 @@ const functions = require('firebase-functions/v2/https');
 initializeApp();
 
 const recordController = require('./controllers/recordController');
-const { onDocumentCreated } = require('firebase-functions/v2/firestore');
 const { onNewRecordCreated } = require('./triggers/recordTrigger');
 
 exports.createRecord = functions.onRequest(recordController.createRecord);
