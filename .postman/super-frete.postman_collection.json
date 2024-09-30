@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "2b744383-0536-4244-a333-5e5734569421",
+		"name": "super-frete",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "979385"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/super-frete-ea193/us-central1/getRecord/io4L48LH883NP5Z5ZdTD",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"super-frete-ea193",
+						"us-central1",
+						"getRecord",
+						"io4L48LH883NP5Z5ZdTD"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTcxNzg5MzAxNCwiZXhwIjoxNzE3ODk2NjE0LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1kdzhnOUBmaXJlYmFzZS1ub2RlLWV4YW1wbGUuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1kdzhnOUBmaXJlYmFzZS1ub2RlLWV4YW1wbGUuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJIMnlFVno5V3hmTUVtWTFqQ1pUVTNvWm95NHgyIn0.JsU8Hfb7CyvBtQFKX9NCXUlVs1K2bB7hAcPNo0UvI0s3-T8ilBHt8DqhD9IF99_NqUVNXVFfJzwSn6NN8lgiHvPmBVuVfL7c4_Bdn0HtGWIzjZX34VkKTdKoR9TW6KBLyJvho-imxCliSt7W4WewUf_XpFvPresR7xj2lyUHNW8kOiQv55qCEySoImRhGrQMJvkprgbSgUAJEHeSZ_Kuehl_o0NS82aGLAvzkFURkKV9jtd75xuNn9_Nqp2rmxOnNrSJvEQeoRK215F8olhGLE3tXfJs0Kp0TWTC72Yg2BEFA4En8FBoL6DhTdkcg-qofdSM5Iv2Io_RXCB5IuHkEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"movie\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/super-frete-ea193/us-central1/createRecord",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"super-frete-ea193",
+						"us-central1",
+						"createRecord"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "inherit"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
