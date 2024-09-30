@@ -38,7 +38,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd super-frete
+   cd super-frete/functions
    ```
 
 3. Instale as dependências:
@@ -47,13 +47,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
    npm install
    ```
 
-4. Configure o Firebase:
-
-   ```bash
-   firebase init
-   ```
-
-5. Inicie o emulador do Firebase:
+4. Inicie o emulador do Firebase:
 
    ```bash
    firebase emulators:start
