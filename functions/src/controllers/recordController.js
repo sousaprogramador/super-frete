@@ -14,7 +14,7 @@ exports.createRecord = async (req, res) => {
 };
 
 exports.getRecord = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params[0];
   try {
     const record = await recordService.getRecord(id);
     if (!record) {
@@ -29,7 +29,7 @@ exports.getRecord = async (req, res) => {
 };
 
 exports.updateRecord = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params[0];
   const { name } = req.body;
   try {
     await recordService.updateRecord(id, name);
@@ -41,7 +41,7 @@ exports.updateRecord = async (req, res) => {
 };
 
 exports.deleteRecord = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params[0];
   try {
     await recordService.deleteRecord(id);
     res.status(200).send({ message: 'Registro deletado com sucesso.' });
